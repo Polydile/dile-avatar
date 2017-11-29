@@ -12,13 +12,18 @@
       }
     </style>
     
-    <img src="[[src]]" alt$="[[alt]]">
+    <img 
+      src="[[src]]" 
+      alt$="[[alt]]"
+      on-click="_onAvatarClick"
+    >
   </template>
 
   <script>
     /**
-     * `pas-avatar`
-     * Polymer Element for User&#39;s Avatar.
+     * # pas-avatar
+     * `<pas-avatar>`
+     * ## Polymer Element for User&#39;s Avatar.
      * Display an image of a user
      *
      * @customElement
@@ -26,6 +31,13 @@
      * @demo demo/index.html
      */
     class PasAvatar extends Polymer.Element {
+
+      /**
+        Fired when the avatar is clicked.
+        @event avatar-click
+        Event param: {detail: {id: this.id}} detail Contains the passed arbitrary ID.
+      */
+
       static get is() { return 'pas-avatar'; }
       static get properties() {
         return {
@@ -37,11 +49,18 @@
             value: ''
           },
 
+          /**
+          * Alt text to use with this image.
+          */
           alt: {
             type: String,
             value: ''
           }
         };
+      }
+
+      _onAvatarClick() {
+        this.dispatchEvent(new CustomEvent('avatar-click'));
       }
     }
 
