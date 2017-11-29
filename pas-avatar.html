@@ -1,0 +1,50 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="pas-avatar">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+    
+    <img src="[[src]]" alt$="[[alt]]">
+  </template>
+
+  <script>
+    /**
+     * `pas-avatar`
+     * Polymer Element for User&#39;s Avatar.
+     * Display an image of a user
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PasAvatar extends Polymer.Element {
+      static get is() { return 'pas-avatar'; }
+      static get properties() {
+        return {
+          /**
+          * The URL of an image for this avatar.
+          */
+          src: {
+            type: String,
+            value: ''
+          },
+
+          alt: {
+            type: String,
+            value: ''
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PasAvatar.is, PasAvatar);
+  </script>
+</dom-module>
