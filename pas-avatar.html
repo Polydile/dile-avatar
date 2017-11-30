@@ -8,19 +8,25 @@
   <template>
     <style>
       :host {
-        display: block;
+        display: inline-block;
       }
-      img {
-        width: 100px;
-        height: 100px;
+      div {
+        display: inline-block;        
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     </style>
     
-    <img 
-      src="[[src]]" 
-      alt$="[[alt]]"
-      on-click="_onAvatarClick"
-    >
+    <div
+      id="img"
+      role="img"
+      aria-label$="[[alt]]"
+    ></div>
+
   </template>
 
   <script>
@@ -59,22 +65,49 @@
           */
           src: {
             type: String,
-            value: ''
+            value: '',
+            observer: '_asignImage'
           },
 
           /**
-          * Alt text to use with this image.
+          * Alt text to use with this avatar.
           * @type {String}
           */
           alt: {
             type: String,
             value: ''
+          },
+
+          /**
+          * Size of the avatar. Should be in pixels.
+          * The value indicated will be used for width & height of the avatar
+          * @type {Number}
+          */
+          size: {
+            type: Number,
+            value: 50,
+            observer: '_asignSize'
           }
         };
       }
 
       _onAvatarClick() {
         this.dispatchEvent(new CustomEvent('avatar-click'));
+      }
+
+      _asignImage(src) {
+        if(src) {
+          console.log('colocando imagen', src)
+          this.$.img.style.backgroundImage = `url(${src})`;
+        }
+      }
+
+      _asignSize(size) {
+        let style = this.$.img.style;
+        style.backgroundSize = `${size}px`;
+        style.width = `${size}px`;
+        style.height = `${size}px`;
+        style.borderRadius = `${size}px`;        
       }
     }
 
