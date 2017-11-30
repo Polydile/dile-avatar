@@ -1,5 +1,9 @@
 <link rel="import" href="../polymer/polymer-element.html">
 
+<!--
+`<pas-avarar>` is a Polymer component to display an image from user's avatar
+-->
+
 <dom-module id="pas-avatar">
   <template>
     <style>
@@ -24,7 +28,15 @@
      * # pas-avatar
      * `<pas-avatar>`
      * ## Polymer Element for User&#39;s Avatar.
-     * Display an image of a user
+     * Display styled user's avatar image. 
+     * You may use it as an regular image `<img>` HTML tag, with 2 posible attributes: src and alt.
+     *
+     * ```html
+     * <pas-avatar
+     *  src="https://desarrolloweb.com/archivoimg/general/1629.jpg"
+     *  alt="Avatar de usuario"
+     * ></pas-avatar>
+     * ```
      *
      * @customElement
      * @polymer
@@ -32,17 +44,18 @@
      */
     class PasAvatar extends Polymer.Element {
 
+      static get is() { return 'pas-avatar'; }
+
       /**
         Fired when the avatar is clicked.
         @event avatar-click
-        Event param: {detail: {id: this.id}} detail Contains the passed arbitrary ID.
       */
 
-      static get is() { return 'pas-avatar'; }
       static get properties() {
         return {
           /**
           * The URL of an image for this avatar.
+          * @type {String}
           */
           src: {
             type: String,
@@ -51,6 +64,7 @@
 
           /**
           * Alt text to use with this image.
+          * @type {String}
           */
           alt: {
             type: String,
