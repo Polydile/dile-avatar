@@ -1,4 +1,4 @@
-# \<pas-avatar\>
+# \<dile-avatar\>
 
 ## Polymer Element for User&#39;s Avatar
 
@@ -9,10 +9,10 @@ This is a Polymer Web Component to show an image for user avatar.
 Use this element as using an image:
 
 ```html
-<pas-avatar
+<dile-avatar
   src="https://desarrolloweb.com/archivoimg/general/1629.jpg"
   alt="Avatar de usuario"
-></pas-avatar>
+></dile-avatar>
 ```
 
 ## Install the Polymer-CLI

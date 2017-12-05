@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "elements": [
     {
-      "description": "`<pas-avarar>` is a Polymer component to display an image from user's avatar\n\n# pas-avatar\n`<pas-avatar>`\n## Polymer Element for User&#39;s Avatar.\nDisplay styled user's avatar image. \nYou may use it as an regular image `<img>` HTML tag, with 2 posible attributes: src and alt.\n\n```html\n<pas-avatar\n src=\"https://desarrolloweb.com/archivoimg/general/1629.jpg\"\n alt=\"Avatar de usuario\"\n></pas-avatar>\n```",
+      "description": "`<pas-avarar>` is a Polymer component to display an image from user's avatar\n\n# dile-avatar\n`<dile-avatar>`\n## Polymer Element for User&#39;s Avatar.\nDisplay styled user's avatar image. \nYou may use it as an regular image `<img>` HTML tag, with 2 posible attributes: src and alt.\n\n```html\n<dile-avatar\n src=\"https://desarrolloweb.com/archivoimg/general/1629.jpg\"\n alt=\"Avatar de usuario\"\n></dile-avatar>\n```",
       "summary": "",
-      "path": "pas-avatar.html",
+      "path": "dile-avatar.html",
       "properties": [
         {
           "name": "src",
@@ -152,7 +152,7 @@
       },
       "privacy": "public",
       "superclass": "HTMLElement",
-      "name": "PasAvatar",
+      "name": "DileAvatar",
       "attributes": [
         {
           "name": "src",
@@ -216,12 +216,12 @@
         "selectors": []
       },
       "slots": [],
-      "tagname": "pas-avatar"
+      "tagname": "dile-avatar"
     },
     {
-      "description": "# pas-avatar\n`<pas-avatar>`\n## Polymer Element for User&#39;s Avatar.\nDisplay styled user's avatar image. \nYou may use it as an regular image `<img>` HTML tag, with 2 posible attributes: src and alt.\n\n```html\n<pas-avatar\n src=\"https://desarrolloweb.com/archivoimg/general/1629.jpg\"\n alt=\"Avatar de usuario\"\n></pas-avatar>\n```",
+      "description": "# dile-avatar\n`<dile-avatar>`\n## Polymer Element for User&#39;s Avatar.\nDisplay styled user's avatar image. \nYou may use it as an regular image `<img>` HTML tag, with 2 posible attributes: src and alt.\n\n```html\n<dile-avatar\n src=\"https://desarrolloweb.com/archivoimg/general/1629.jpg\"\n alt=\"Avatar de usuario\"\n></dile-avatar>\n```",
       "summary": "",
-      "path": "pas-avatar.html",
+      "path": "dile-avatar.html",
       "properties": [
         {
           "name": "__serializing",

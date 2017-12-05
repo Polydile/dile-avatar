@@ -4,7 +4,7 @@
 `<pas-avarar>` is a Polymer component to display an image from user's avatar
 -->
 
-<dom-module id="pas-avatar">
+<dom-module id="dile-avatar">
   <template>
     <style>
       :host {
@@ -31,26 +31,26 @@
 
   <script>
     /**
-     * # pas-avatar
-     * `<pas-avatar>`
+     * # dile-avatar
+     * `<dile-avatar>`
      * ## Polymer Element for User&#39;s Avatar.
      * Display styled user's avatar image. 
      * You may use it as an regular image `<img>` HTML tag, with 2 posible attributes: src and alt.
      *
      * ```html
-     * <pas-avatar
+     * <dile-avatar
      *  src="https://desarrolloweb.com/archivoimg/general/1629.jpg"
      *  alt="Avatar de usuario"
-     * ></pas-avatar>
+     * ></dile-avatar>
      * ```
      *
      * @customElement
      * @polymer
      * @demo demo/index.html
      */
-    class PasAvatar extends (class extends Polymer.Element {}) {
+    class DileAvatar extends (class extends Polymer.Element {}) {
 
-      static get is() { return 'pas-avatar'; }
+      static get is() { return 'dile-avatar'; }
 
       /**
         Fired when the avatar is clicked.
@@ -111,6 +111,6 @@
       }
     }
 
-    window.customElements.define(PasAvatar.is, PasAvatar);
+    window.customElements.define(DileAvatar.is, DileAvatar);
   </script>
 </dom-module>

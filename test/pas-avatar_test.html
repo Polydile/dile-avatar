@@ -4,36 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>pas-avatar test</title>
+    <title>dile-avatar test</title>
 
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
 
-    <link rel="import" href="../pas-avatar.html">
+    <link rel="import" href="../dile-avatar.html">
   </head>
   <body>
 
     <test-fixture id="BasicTestFixture">
       <template>
-        <pas-avatar></pas-avatar>
+        <dile-avatar></dile-avatar>
       </template>
     </test-fixture>
 
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
-        <pas-avatar prop1="new-prop1"></pas-avatar>
+        <dile-avatar prop1="new-prop1"></dile-avatar>
       </template>
     </test-fixture>
 
     <script>
-      suite('pas-avatar', () => {
+      suite('dile-avatar', () => {
 
         test('instantiating the element with default properties works', () => {
           const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'pas-avatar');
+          assert.equal(element.prop1, 'dile-avatar');
           const elementShadowRoot = element.shadowRoot;
           const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello pas-avatar!');
+          assert.equal(elementHeader.innerHTML, 'Hello dile-avatar!');
         });
 
         test('setting a property on the element works', () => {

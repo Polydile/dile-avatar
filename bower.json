@@ -1,7 +1,7 @@
 {
-  "name": "pas-avatar",
+  "name": "dile-avatar",
   "description": "Polymer Element for User&#39;s Avatar",
-  "main": "pas-avatar.html",
+  "main": "dile-avatar.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0"
   },
