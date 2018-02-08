@@ -1,5 +1,6 @@
 {
   "name": "dile-avatar",
+  "version": "1.0.0",
   "description": "Polymer Element for User&#39;s Avatar",
   "main": "dile-avatar.html",
   "dependencies": {
